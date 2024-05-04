@@ -1,0 +1,6 @@
+<div>
+    <h2 id="component">Proyectos</h2>
+    @for(project of projects; track project.id){
+        <app-project-item [project]="project"></app-project-item>
+    }
+</div>

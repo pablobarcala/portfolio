@@ -1,0 +1,36 @@
+<div id="component">
+    <h2>Stack</h2>
+    <div class="stack">
+        <h3>Front End</h3>
+        <div class="items">
+            @for (stack of stacks; track stack.id) {
+                @if(stack.type == "front"){
+                    <app-stack-item [stack]="stack"></app-stack-item>
+                }
+            }
+        </div>
+    </div>
+    <div class="stack">
+        <h3>Back End</h3>
+        <div class="items">
+            @for (stack of stacks; track stack.id) {
+                @if(stack.type == "back"){
+                    <app-stack-item [stack]="stack"></app-stack-item>
+                }
+            }
+        </div>
+    </div>
+    <div class="stack">
+        <h3>Lenguajes</h3>
+        <div class="items">
+            @for (stack of stacks; track stack.id) {
+                @if(stack.type == "language"){
+                    <app-stack-item [stack]="stack"></app-stack-item>
+                }
+            }
+        </div>
+    </div>
+    <div class="stack">
+        <button>Ver más</button>
+    </div>
+</div>

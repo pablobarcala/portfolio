@@ -1,0 +1,57 @@
+.container {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+img {
+    width: 35%;
+    border-radius: 10px;
+}
+
+h3 {
+    padding-top: 20px;
+    font-size: 1.75rem;
+    color: var(--LIGHT-BLUE);
+}
+
+.stack {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btns {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    width: fit-content;
+}
+
+.separator {
+    margin: auto;
+    width: 80%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: var(--LIGHT-BLUE);
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    img {
+        width: 100%;
+    }
+    
+    .separator {
+        margin-bottom: 20px;
+    }
+}

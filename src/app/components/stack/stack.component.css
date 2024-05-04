@@ -1,0 +1,33 @@
+.stack {
+    margin: 20px 0;
+}
+
+.stack,
+.items {
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    width: 10%;
+}
+
+h3 {
+    color: #88BFCF;
+}
+
+.items {
+    padding: 20px 0;
+    gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    h3 {
+        width: auto;
+    }
+
+    .stack {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,45 @@
+.container {
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 3px solid transparent;
+}
+
+li:hover {
+    animation: subtitulo 0.2s forwards;
+}
+
+@keyframes subtitulo {
+    0% {
+        border-bottom-width: 0;
+    }
+    100% {
+        border-bottom: 3px solid var(--RED);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        justify-content: center;
+    }
+
+    ul {
+        display: none;
+    }
+
+    img {
+        width: 50%;
+    }
+}

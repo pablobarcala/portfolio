@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pablobarcala-f9981": {
+      "hosting": {
+        "front": [
+          "pablobarcala-f9981"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pablobarcala-f9981"
+  }
+}
