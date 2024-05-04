@@ -3,7 +3,7 @@
     <div class="info">
         <h3>{{project.name}}</h3>
         <p>{{project.description}}</p>
-        <h3>Tecnologias usadas</h3>
+        <h4>Tecnología usada</h4>
         <div class="stack">
             @for(stack of project.stack; track stack.id){
                 <app-stack-item [stack]="stack"></app-stack-item>
@@ -12,10 +12,10 @@
         @if(project.code || project.url) {
             <div class="btns">
                 @if(project.code){
-                    <a href="{{project.code}}">Ver código</a>
+                    <a id="btn" href="{{project.code}}">Ver código</a>
                 }
                 @if(project.url){
-                    <a href="{{project.url}}">Ver proyecto</a>
+                    <a id="btn" href="{{project.url}}">Ver proyecto</a>
                 }
             </div>
         }

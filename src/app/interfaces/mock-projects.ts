@@ -12,8 +12,7 @@ export const PROJECTS: Project[] = [
             STACK[2],
             STACK[4]
         ],
-        code: "google.com",
-        url: "google.com"
+        code: "https://github.com/pablobarcala/anbar-front"
     },
     {
         id: 1,
@@ -24,8 +23,6 @@ export const PROJECTS: Project[] = [
             STACK[0],
             STACK[2],
             STACK[4]
-        ],
-        code: "google.com",
-        url: "google.com"
+        ]
     }
 ]

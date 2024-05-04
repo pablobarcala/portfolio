@@ -10,10 +10,14 @@ img {
     border-radius: 10px;
 }
 
-h3 {
+h3,
+h4 {
     padding-top: 20px;
-    font-size: 1.75rem;
     color: var(--LIGHT-BLUE);
+}
+
+h3 {
+    font-size: 1.75rem;
 }
 
 .stack {
@@ -35,6 +39,8 @@ a {
 
 .separator {
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 80%;
     height: 2px;
     border-radius: 20px;
@@ -49,9 +55,5 @@ a {
 
     img {
         width: 100%;
-    }
-    
-    .separator {
-        margin-bottom: 20px;
     }
 }

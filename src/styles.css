@@ -37,7 +37,8 @@ a {
     box-sizing: border-box;
 }
 
-button {
+button,
+a#btn {
     cursor: pointer;
     border-radius: 20px;
     border: 1px solid #034078;
@@ -49,7 +50,8 @@ button {
 }
 
 a:hover,
-button:hover {
+button:hover,
+a#btn:hover {
     animation: links 0.3s forwards;
 }
 
