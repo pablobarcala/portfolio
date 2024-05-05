@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Stack } from '../../interfaces/Stack';
 import { STACK } from '../../interfaces/mock-stack';
 import { StackItemComponent } from '../stack-item/stack-item.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-stack',
   standalone: true,
-  imports: [StackItemComponent],
+  imports: [StackItemComponent, RouterModule],
   templateUrl: './stack.component.html',
   styleUrl: './stack.component.css'
 })
