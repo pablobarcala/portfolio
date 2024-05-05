@@ -1,8 +1,49 @@
-h3 {
-    font-size: 2rem;
-    color: var(--LIGHT-BLUE);
+.container {
+    padding: 20px 0;
+}
+
+img {
+    width: 10%;
+    border-radius: 10px;
+}
+
+.description {
+    padding: 20px 0;
+}
+
+.fechas {
+    font-weight: 600;
+}
+
+.progreso {
+    font-weight: 200;
+    font-size: 0.8rem;
 }
 
 a {
+    margin: 20px 0;
     width: fit-content;
+}
+
+.separator {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: var(--LIGHT-BLUE);
+}
+
+@media screen and (max-width: 767px) {
+    .img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    img {
+        width: 30%;
+    }
 }

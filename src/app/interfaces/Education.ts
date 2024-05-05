@@ -4,5 +4,7 @@ export interface Education {
     title: string,
     description?: string,
     img: string,
-    url: string
+    url?: string,
+    inicio: string,
+    final?: string
 }

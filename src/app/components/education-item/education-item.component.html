@@ -1,4 +1,16 @@
 <div class="container">
+    <div class="img">
+        <img src="../../../assets/education-imgs/{{education.img}}" alt="{{education.name}}">
+    </div>
     <h3>{{education.name}}</h3>
+    <h4>{{education.title}}</h4>
+    <p class="description">{{education.description}}</p>
+    <p class="fechas">{{education.inicio}} @if(education.final) {
+        - {{education.final}}
+    } </p>
+    @if(!education.final) {
+        <p class="progreso">En progreso</p>
+    }
     <a target="_blank" id="btn" href="{{education.url}}">Certificado</a>
+    <div class="separator"></div>
 </div>

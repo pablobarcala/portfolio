@@ -6,7 +6,17 @@ export const EDUCATION: Education[] = [
         name: "Argentina Programa 4.0",
         title: "Desarrollador web Full Stack",
         description: "Curso de desarrollo web Full Stack con tecnologías como Angular, Spring, Git, Docker, MySQL, Figma y demás.",
-        img: "",
-        url: "https://drive.google.com/file/d/1bpRbE8yejbshPw8f-SKk5G18Tjq19cyB/view?usp=sharing"
+        img: "arg-programa.png",
+        url: "https://drive.google.com/file/d/1bpRbE8yejbshPw8f-SKk5G18Tjq19cyB/view?usp=sharing",
+        inicio: "Octubre 2022",
+        final: "Mayo 2023"
+    },
+    {
+        id: 1,
+        name: "UNSTA",
+        title: "Desarrollador de software",
+        description: "Cursando la Tecnicatura universitaria en Desarrollo y Calidad de Software, con tecnologías como React y .NET",
+        img: "unsta.png",
+        inicio: "Marzo 2023"
     }
 ]

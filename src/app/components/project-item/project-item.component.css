@@ -13,11 +13,10 @@ img {
 h3,
 h4 {
     padding-top: 20px;
-    color: var(--LIGHT-BLUE);
 }
 
-h3 {
-    font-size: 1.75rem;
+h4 {
+    color: var(--LIGHT-BLUE);
 }
 
 .stack {

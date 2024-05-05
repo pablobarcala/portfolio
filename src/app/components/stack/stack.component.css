@@ -8,12 +8,9 @@
     align-items: center;
 }
 
-h3 {
+h4 {
+    font-size: 1.2rem;
     width: 10%;
-}
-
-h3 {
-    color: #88BFCF;
 }
 
 .items {
