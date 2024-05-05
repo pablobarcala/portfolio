@@ -11,6 +11,8 @@
     @if(!education.final) {
         <p class="progreso">En progreso</p>
     }
-    <a target="_blank" id="btn" href="{{education.url}}">Certificado</a>
+    @if(education.url) {
+        <a target="_blank" id="btn" href="{{education.url}}">Certificado</a>
+    }
     <div class="separator"></div>
 </div>
