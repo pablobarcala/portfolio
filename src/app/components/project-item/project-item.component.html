@@ -12,10 +12,10 @@
         @if(project.code || project.url) {
             <div class="btns">
                 @if(project.code){
-                    <a id="btn" href="{{project.code}}">Ver código</a>
+                    <a target="_blank" id="btn" href="{{project.code}}">Ver código</a>
                 }
                 @if(project.url){
-                    <a id="btn" href="{{project.url}}">Ver proyecto</a>
+                    <a target="_blank" id="btn" href="{{project.url}}">Ver proyecto</a>
                 }
             </div>
         }
