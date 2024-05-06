@@ -1,0 +1,66 @@
+.container,
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--BLUE);
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    gap: 10px;
+    position: fixed;
+    top: 40%;
+    right: 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    opacity: 0%;
+    position: absolute;
+    right: 120%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+p.show {
+    animation: title-hover 0.2s forwards;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.btn:hover {
+    animation: btn-hover 0.3s forwards;
+}
+
+@keyframes btn-hover {
+    0% {
+        
+    }
+    100% {
+        background-color: var(--SECOND-BLUE);
+    }
+}
+
+@keyframes title-hover {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="item">
+        <p class="title" [class.show]="show && item == 1">Contacto</p>
+        <div class="btn" (click)="moveTo('contact')" (mouseenter)="showTitle(1)" (mouseleave)="hideTitle()">
+            <img src="../../../assets/nav-imgs/contact.svg" alt="Contact">
+        </div>
+    </div>
+    <div class="item">
+        <p class="title" [class.show]="show && item == 2">Stack</p>
+        <div class="btn" (click)="moveTo('stack')" (mouseenter)="showTitle(2)" (mouseleave)="hideTitle()">
+            <img src="../../../assets/nav-imgs/stack.svg" alt="Stack">
+        </div>
+    </div>
+    <div class="item">
+        <p class="title" [class.show]="show && item == 3">Proyectos</p>
+        <div class="btn" (click)="moveTo('projects')" (mouseenter)="showTitle(3)" (mouseleave)="hideTitle()">
+            <img src="../../../assets/nav-imgs/projects.svg" alt="Projects">
+        </div>
+    </div>
+    <div class="item">
+        <p class="title" [class.show]="show && item == 4">Educación</p>
+        <div class="btn" (click)="moveTo('education')" (mouseenter)="showTitle(4)" (mouseleave)="hideTitle()">
+            <img src="../../../assets/nav-imgs/education.svg" alt="Education">
+        </div>
+    </div>
+</div>

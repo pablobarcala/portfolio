@@ -13,6 +13,9 @@
     background-attachment: fixed;
     background-repeat: repeat;
     --RED: #E14343;
+    --BG-BLUE: #0A1128;
+    --BLUE: #001F54;
+    --SECOND-BLUE: #034078;
     --LIGHT-BLUE: #88BFCF;
 }
 
