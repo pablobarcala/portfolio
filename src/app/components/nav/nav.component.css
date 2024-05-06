@@ -64,3 +64,17 @@ p.show {
         opacity: 100%;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .container {
+        right: 25%;
+        bottom: 0;
+        top: auto;
+        border-radius: 10px 10px 0 0;
+        flex-direction: row;
+    }
+
+    p {
+        display: none;
+    }
+}
