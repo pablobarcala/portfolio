@@ -67,14 +67,15 @@ p.show {
 
 @media screen and (max-width: 767px) {
     .container {
-        right: 25%;
+        display: none;
+        /* right: 25%;
         bottom: 0;
         top: auto;
         border-radius: 10px 10px 0 0;
-        flex-direction: row;
+        flex-direction: row; */
     }
 
-    p {
+    /* p {
         display: none;
-    }
+    } */
 }
