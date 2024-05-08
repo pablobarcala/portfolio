@@ -13,5 +13,16 @@ export const PROJECTS: Project[] = [
             STACK[4]
         ],
         code: "https://github.com/pablobarcala/anbar-front"
+    },
+    {
+        id: 1,
+        name: "Tip Calculator",
+        description: "Simple app para calcular la propina por persona además del monto total a pagar, desarrollado con HTML, CSS y Javascript. Desafío de Frontend Mentor.",
+        img: "tip-calculator.png",
+        stack: [
+            STACK[5]
+        ],
+        code: "https://github.com/pablobarcala/Tip-Calculator",
+        url: "https://pablobarcala.github.io/Tip-Calculator/"
     }
 ]
