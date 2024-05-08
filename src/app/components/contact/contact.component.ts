@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +10,10 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   show: boolean = false
+
+  constructor(
+    private snackbar: MatSnackBar
+  ) {}
 
   showTitle() {
     this.show = true
@@ -21,5 +26,8 @@ export class ContactComponent {
   copyMail() {
     const mail: string = "pablo.d.barcala@gmail.com"
     navigator.clipboard.writeText(mail)
+    this.snackbar.open("Copiado", "Cerrar", {
+      duration: 2000
+    })
   }
 }

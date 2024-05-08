@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +19,10 @@
     --BLUE: #001F54;
     --SECOND-BLUE: #034078;
     --LIGHT-BLUE: #88BFCF;
+    --mat-snack-bar-button-color: var(--LIGHT-BLUE);
+    --mdc-snackbar-container-color: var(--BLUE);
+    --mdc-snackbar-supporting-text-font: "Poppins";
+    --mdc-snackbar-supporting-text-color: #fff;
 }
 
 #component {
@@ -66,6 +72,7 @@ button:hover,
 a#btn:hover {
     animation: links 0.3s forwards;
 }
+
 
 @keyframes links {
     0% {
