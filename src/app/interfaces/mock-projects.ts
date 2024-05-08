@@ -20,6 +20,8 @@ export const PROJECTS: Project[] = [
         description: "Simple app para calcular la propina por persona además del monto total a pagar, desarrollado con HTML, CSS y Javascript. Desafío de Frontend Mentor.",
         img: "tip-calculator.png",
         stack: [
+            STACK[9],
+            STACK[10],
             STACK[5]
         ],
         code: "https://github.com/pablobarcala/Tip-Calculator",

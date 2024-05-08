@@ -54,5 +54,15 @@ export const STACK: Stack[] = [
         name: "C#",
         img: "c-sharp.svg",
         type: "language"
+    },
+    {
+        id: 9,
+        name: "HTML",
+        img: "html.svg"
+    },
+    {
+        id: 10,
+        name: "CSS",
+        img: "css.svg"
     }
 ]
