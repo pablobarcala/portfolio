@@ -16,6 +16,11 @@ h4 {
 .items {
     padding: 20px 0;
     gap: 20px;
+    overflow-x: auto;
+}
+
+.items::-webkit-scrollbar {
+    display: none;
 }
 
 @media screen and (max-width: 767px) {

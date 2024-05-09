@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.type {
+    padding: 20px 0;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    overflow-x: auto;
+}
+
+.items::-webkit-scrollbar {
+    display: none;
+}

@@ -4,7 +4,7 @@
         <h4>Front End</h4>
         <div class="items">
             @for (stack of stacks; track stack.id) {
-                @if(stack.type == "front"){
+                @if(stack.type?.includes("front")){
                     <app-stack-item [stack]="stack"></app-stack-item>
                 }
             }
@@ -14,7 +14,7 @@
         <h4>Back End</h4>
         <div class="items">
             @for (stack of stacks; track stack.id) {
-                @if(stack.type == "back"){
+                @if(stack.type?.includes("back")){
                     <app-stack-item [stack]="stack"></app-stack-item>
                 }
             }
@@ -24,7 +24,7 @@
         <h4>Lenguajes</h4>
         <div class="items">
             @for (stack of stacks; track stack.id) {
-                @if(stack.type == "language"){
+                @if(stack.type?.includes("language")){
                     <app-stack-item [stack]="stack"></app-stack-item>
                 }
             }
