@@ -3,6 +3,7 @@
         <h2>Tech Stack</h2>
         <button routerLink="">Volver</button>
     </div>
+    <!-- FRONT -->
     <div class="type">
         <h3>Front</h3>
         <div class="items">
@@ -15,6 +16,7 @@
             }
         </div>
     </div>
+    <!-- BACK Y DB -->
     <div class="type">
         <h3>Back y base de datos</h3>
         <div class="items">
@@ -27,6 +29,7 @@
             }
         </div>
     </div>
+    <!-- LENGUAJES -->
     <div class="type">
         <h3>Lenguajes</h3>
         <div class="items">
@@ -39,6 +42,7 @@
             }
         </div>
     </div>
+    <!-- CLOUD -->
     <div class="type">
         <h3>Cloud</h3>
         <div class="items">
@@ -51,6 +55,7 @@
             }
         </div>
     </div>
+    <!-- TESTING -->
     <div class="type">
         <h3>Testing</h3>
         <div class="items">
@@ -63,8 +68,22 @@
             }
         </div>
     </div>
+    <!-- CONTROL DE VERSIONES -->
     <div class="type">
-        <h3>Others</h3>
+        <h3>Control de versiones</h3>
+        <div class="items">
+            @for (item of stack; track item.id) {
+                @if(item.type?.includes("versioning")) {
+                    <app-stack-item
+                        [stack]="item"
+                    ></app-stack-item>
+                }
+            }
+        </div>
+    </div>
+    <!-- OTROS -->
+    <div class="type">
+        <h3>Otros</h3>
         <div class="items">
             @for (item of stack; track item.id){
                 @if (item.type?.includes("others")) {
