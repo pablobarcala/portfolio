@@ -10,7 +10,8 @@ export const PROJECTS: Project[] = [
         stack: [
             STACK[0],
             STACK[2],
-            STACK[4]
+            STACK[4],
+            STACK[14]
         ]
     },
     {
@@ -21,7 +22,8 @@ export const PROJECTS: Project[] = [
         stack: [
             STACK[9],
             STACK[10],
-            STACK[5]
+            STACK[5],
+            STACK[12]
         ],
         code: "https://github.com/pablobarcala/Tip-Calculator",
         url: "https://pablobarcala.github.io/Tip-Calculator/"
