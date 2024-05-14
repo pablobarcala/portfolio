@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { IdiomaService } from '../../services/idioma.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -9,13 +8,5 @@ import { IdiomaService } from '../../services/idioma.service';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  idioma: string = ""
-
-  constructor(
-    private idiomaService: IdiomaService
-  ){
-    idiomaService.getIdioma().subscribe((res) => {
-      this.idioma = res
-    })
-  }
+  @Input() idioma: string = ""
 }

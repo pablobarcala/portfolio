@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Stack } from '../../interfaces/Stack';
 import { STACK } from '../../interfaces/mock-stack';
 import { StackItemComponent } from '../stack-item/stack-item.component';
@@ -13,14 +13,6 @@ import { IdiomaService } from '../../services/idioma.service';
   styleUrl: './stack.component.css'
 })
 export class StackComponent {
+  @Input() idioma: string = ""
   stacks: Stack[] = STACK
-  idioma: string = ""
-
-  constructor(
-    private idiomaService: IdiomaService
-  ) {
-    idiomaService.getIdioma().subscribe((resp) => {
-      this.idioma = resp
-    })
-  }
 }

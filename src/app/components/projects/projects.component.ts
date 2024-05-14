@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProjectItemComponent } from '../project-item/project-item.component';
 import { Project } from '../../interfaces/Project';
 import { PROJECTS } from '../../interfaces/mock-projects';
+import { IdiomaService } from '../../services/idioma.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,5 +12,6 @@ import { PROJECTS } from '../../interfaces/mock-projects';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
+  @Input() idioma: string = ""
   projects: Project[] = PROJECTS
 }

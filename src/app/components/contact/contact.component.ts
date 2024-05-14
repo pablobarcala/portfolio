@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { IdiomaService } from '../../services/idioma.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,17 +9,12 @@ import { IdiomaService } from '../../services/idioma.service';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+  @Input() idioma: string = ""
   show: boolean = false
-  idioma: string = ""
 
   constructor(
-    private snackbar: MatSnackBar,
-    private idiomaService: IdiomaService
-  ) {
-    idiomaService.getIdioma().subscribe((resp) => {
-      this.idioma = resp
-    })
-  }
+    private snackbar: MatSnackBar
+  ) {}
 
   showTitle() {
     this.show = true

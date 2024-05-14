@@ -1,5 +1,9 @@
 <div>
-    <h2 id="component">Proyectos</h2>
+    @if (idioma == "Es") {
+        <h2 id="component">Proyectos</h2>
+    } @else {
+        <h2 id="component">Projects</h2>
+    }
     @for(project of projects; track project.id){
         <app-project-item [project]="project"></app-project-item>
     }
