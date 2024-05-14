@@ -21,7 +21,11 @@
         </div>
     </div>
     <div class="stack">
-        <h4>Lenguajes</h4>
+        @if (idioma == "Es") {
+            <h4>Lenguajes</h4>
+        } @else {
+            <h4>Languages</h4>
+        }
         <div class="items">
             @for (stack of stacks; track stack.id) {
                 @if(stack.type?.includes("language")){
@@ -31,6 +35,10 @@
         </div>
     </div>
     <div class="stack">
-        <button routerLink="/stack">Ver más</button>
+        @if (idioma == "Es"){
+            <button routerLink="/stack">Ver más</button>
+        } @else {
+            <button routerLink="/stack">More</button>
+        }
     </div>
 </div>
