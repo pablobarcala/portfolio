@@ -1,9 +1,16 @@
 <div id="component" class="container">
     <div class="title-container">
-        <h2>Contacto</h2>
-        <div class="copy-title" [class.show]="show">
-            Copiar
-        </div>
+        @if (idioma == "Es") {
+            <h2>Contacto</h2>
+            <div class="copy-title" [class.show]="show">
+                Copiar
+            </div>
+        } @else {
+            <h2>Contact</h2>
+            <div class="copy-title" [class.show]="show">
+                Copy
+            </div>
+        }
     </div>
     <div class="mail-container">
         <p class="mail">pablo.d.barcala&#64;gmail.com</p>
