@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Education } from '../../interfaces/Education';
 import { EDUCATION } from '../../interfaces/mock-education';
 import { EducationItemComponent } from '../education-item/education-item.component';
@@ -11,5 +11,6 @@ import { EducationItemComponent } from '../education-item/education-item.compone
   styleUrl: './education.component.css'
 })
 export class EducationComponent {
+  @Input() idioma: string = ""
   educations: Education[] = EDUCATION
 }
