@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IdiomaService } from '../../services/idioma.service';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,17 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  idioma: string = ""
+  
+  constructor(
+    private idiomaService: IdiomaService
+  ) {
+    idiomaService.getIdioma().subscribe((res) => {
+      this.idioma = res
+    })
+  }
 
+  changeIdioma() {
+    this.idiomaService.changeIdioma()
+  }
 }

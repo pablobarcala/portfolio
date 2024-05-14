@@ -2,11 +2,25 @@
     padding: 20px 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: auto;
+}
+
+.change {
+    transform: scale(1.5);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 @media screen and (max-width: 767px) {
-    img {
+    .logo {
         width: 50%;
     }
 }

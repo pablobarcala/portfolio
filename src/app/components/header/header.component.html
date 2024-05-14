@@ -1,3 +1,10 @@
 <div class="container">
-    <img src="../../../assets/logo.png" alt="Logo">
+    <img class="logo" src="../../../assets/logo.png" alt="Logo">
+    <button (click)="changeIdioma()">
+        @if(idioma == "Es") {
+            Español
+        } @else {
+            English
+        }
+    </button>
 </div>
