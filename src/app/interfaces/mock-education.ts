@@ -18,5 +18,14 @@ export const EDUCATION: Education[] = [
         description: "Cursando la Tecnicatura universitaria en Desarrollo y Calidad de Software, con tecnologías como React y .NET",
         img: "unsta.png",
         inicio: "Marzo 2023"
+    },
+    {
+        id: 2,
+        name: "Colegio del Sagrado Corazón",
+        title: "Bachiller en Ciencias Sociales",
+        description: "Colegio donde cursé y egresé con primaria y secundaria completa y un promedio de 6.67.",
+        img: "sagrado.png",
+        inicio: "Marzo 2006",
+        final: "Diciembre 2017"
     }
 ]
