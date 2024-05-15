@@ -1,6 +1,13 @@
 <div id="component" class="container">
-    <h2>Educación</h2>
-    @for (education of educations; track education.id){
-        <app-education-item [education]="education"></app-education-item>
+    @if (idioma == "Es") {
+        <h2>Educación</h2>
+        @for (education of educationsES; track education.id){
+            <app-education-item [education]="education"></app-education-item>
+        }
+    } @else {
+        <h2>Education</h2>
+        @for (education of educationsEN; track education.id){
+            <app-education-item [education]="education"></app-education-item>
+        }
     }
 </div>

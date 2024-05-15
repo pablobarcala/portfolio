@@ -1,6 +1,6 @@
 import { Education } from "./Education";
 
-export const EDUCATION: Education[] = [
+export const EDUCATIONes: Education[] = [
     {
         id: 0,
         name: "Argentina Programa 4.0",
@@ -15,7 +15,7 @@ export const EDUCATION: Education[] = [
         id: 1,
         name: "UNSTA",
         title: "Desarrollador de software",
-        description: "Cursando la Tecnicatura universitaria en Desarrollo y Calidad de Software, con tecnologías como React y .NET",
+        description: "Cursando la Tecnicatura universitaria en Desarrollo y Calidad de Software, con tecnologías como React y ASP .NET",
         img: "unsta.png",
         inicio: "Marzo 2023"
     },

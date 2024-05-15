@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { ProjectItemComponent } from '../project-item/project-item.component';
 import { Project } from '../../interfaces/Project';
-import { PROJECTS } from '../../interfaces/mock-projects';
-import { IdiomaService } from '../../services/idioma.service';
+import { PROJECTSes } from '../../interfaces/mock-projects-es';
+import { PROJECTSen } from '../../interfaces/mock-projects-en';
 
 @Component({
   selector: 'app-projects',
@@ -13,5 +13,6 @@ import { IdiomaService } from '../../services/idioma.service';
 })
 export class ProjectsComponent {
   @Input() idioma: string = ""
-  projects: Project[] = PROJECTS
+  projectsEs: Project[] = PROJECTSes
+  projectsEn: Project[] = PROJECTSen
 }

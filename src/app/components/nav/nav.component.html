@@ -1,6 +1,10 @@
 <div class="container">
     <div class="item">
-        <p class="title" [class.show]="show && item == 1">Contacto</p>
+        @if (idioma == "Es") {
+            <p class="title" [class.show]="show && item == 1">Contacto</p>
+        } @else {
+            <p class="title" [class.show]="show && item == 1">Contact</p>
+        }
         <div class="btn" (click)="moveTo('contact')" (mouseenter)="showTitle(1)" (mouseleave)="hideTitle()">
             <img src="../../../assets/nav-imgs/contact.svg" alt="Contact">
         </div>
@@ -12,13 +16,21 @@
         </div>
     </div>
     <div class="item">
-        <p class="title" [class.show]="show && item == 3">Proyectos</p>
+        @if (idioma == "Es") {
+            <p class="title" [class.show]="show && item == 3">Proyectos</p>
+        } @else {
+            <p class="title" [class.show]="show && item == 3">Projects</p>
+        }
         <div class="btn" (click)="moveTo('projects')" (mouseenter)="showTitle(3)" (mouseleave)="hideTitle()">
             <img src="../../../assets/nav-imgs/projects.svg" alt="Projects">
         </div>
     </div>
     <div class="item">
-        <p class="title" [class.show]="show && item == 4">Educación</p>
+        @if (idioma == "Es") {
+            <p class="title" [class.show]="show && item == 4">Educación</p>
+        } @else {
+            <p class="title" [class.show]="show && item == 4">Education</p>
+        }
         <div class="btn" (click)="moveTo('education')" (mouseenter)="showTitle(4)" (mouseleave)="hideTitle()">
             <img src="../../../assets/nav-imgs/education.svg" alt="Education">
         </div>

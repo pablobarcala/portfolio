@@ -1,7 +1,11 @@
 <div id="component" class="container">
     <div class="header">
         <h2>Tech Stack</h2>
-        <button routerLink="">Volver</button>
+        @if (idioma == "Es") {
+            <button routerLink="">Volver</button>
+        } @else {
+            <button routerLink="">Back</button>
+        }
     </div>
     <!-- FRONT -->
     <div class="type">
@@ -18,7 +22,11 @@
     </div>
     <!-- BACK Y DB -->
     <div class="type">
-        <h3>Back y base de datos</h3>
+        @if (idioma == "Es") {
+            <h3>Back y base de datos</h3>
+        } @else {
+            <h3>Back and database</h3>
+        }
         <div class="items">
             @for (item of stack; track item.id){
                 @if (item.type?.includes("back") || item.type?.includes("database")) {
@@ -31,7 +39,11 @@
     </div>
     <!-- LENGUAJES -->
     <div class="type">
-        <h3>Lenguajes</h3>
+        @if (idioma == "Es") {
+            <h3>Lenguajes</h3>
+        } @else {
+            <h3>Languages</h3>
+        }
         <div class="items">
             @for (item of stack; track item.id){
                 @if (item.type?.includes("language") || item.type?.includes("other language")) {
@@ -70,7 +82,11 @@
     </div>
     <!-- CONTROL DE VERSIONES -->
     <div class="type">
-        <h3>Control de versiones</h3>
+        @if (idioma == "Es") {
+            <h3>Control de versiones</h3>
+        } @else {
+            <h3>Version control</h3>
+        }
         <div class="items">
             @for (item of stack; track item.id) {
                 @if(item.type?.includes("versioning")) {
@@ -83,7 +99,11 @@
     </div>
     <!-- OTROS -->
     <div class="type">
-        <h3>Otros</h3>
+        @if (idioma == "Es") {
+            <h3>Otros</h3>
+        } @else {
+            <h3>Others</h3>
+        }
         <div class="items">
             @for (item of stack; track item.id){
                 @if (item.type?.includes("others")) {

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../../interfaces/Project';
-import { PROJECTS } from '../../interfaces/mock-projects';
+import { PROJECTSes } from '../../interfaces/mock-projects-es';
 import { StackItemComponent } from '../stack-item/stack-item.component';
 
 @Component({
@@ -11,6 +11,5 @@ import { StackItemComponent } from '../stack-item/stack-item.component';
   styleUrl: './project-item.component.css'
 })
 export class ProjectItemComponent {
-  @Input() project: Project = PROJECTS[0]
-  @Input() idioma: string = ""
+  @Input() project: Project = PROJECTSes[0]
 }
