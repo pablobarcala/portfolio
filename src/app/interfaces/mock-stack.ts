@@ -11,7 +11,7 @@ export const STACK: Stack[] = [
         id: 1,
         name: "React",
         img: "react.svg",
-        // type: ["front"]
+        type: ["front"]
     },
     {
         id: 2,
@@ -126,5 +126,11 @@ export const STACK: Stack[] = [
         name: "C",
         img: "c.svg",
         type: ["other language"]
+    },
+    {
+        id: 21,
+        name: "Styled Components",
+        img: "styled-components.svg",
+        type: ["others"]
     }
 ]

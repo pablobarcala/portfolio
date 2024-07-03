@@ -27,5 +27,17 @@ export const PROJECTSes: Project[] = [
         ],
         code: "https://github.com/pablobarcala/Tip-Calculator",
         url: "https://pablobarcala.github.io/Tip-Calculator/"
+    },
+    {
+        id: 2,
+        name: "Finanzas personales",
+        description: "App simple para anotar gastos diarios, desarrollada con React, Axios, JSON Server y Styled Components para los estilos.",
+        img: "finanzas.png",
+        stack: [
+            STACK[1],
+            STACK[5],
+            STACK[21]
+        ],
+        code: "https://github.com/pablobarcala/finanzas-personales"
     }
 ]
