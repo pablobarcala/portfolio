@@ -27,5 +27,17 @@ export const PROJECTSen: Project[] = [
         ],
         code: "https://github.com/pablobarcala/Tip-Calculator",
         url: "https://pablobarcala.github.io/Tip-Calculator/"
+    },
+    {
+        id: 2,
+        name: "Personal finance",
+        description: "Simple app to record daily expenses, developed with React, Axios, JSON Server and Styled Components.",
+        img: "finanzas.png",
+        stack: [
+            STACK[1],
+            STACK[5],
+            STACK[21]
+        ],
+        code: "https://github.com/pablobarcala/finanzas-personales"
     }
 ]
