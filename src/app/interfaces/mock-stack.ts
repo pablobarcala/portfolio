@@ -59,13 +59,13 @@ export const STACK: Stack[] = [
         id: 9,
         name: "HTML",
         img: "html.svg",
-        type: ["front tools"]
+        type: ["language"]
     },
     {
         id: 10,
         name: "CSS",
         img: "css.svg",
-        type: ["front tools"]
+        type: ["language"]
     },
     {
         id: 11,
@@ -132,5 +132,17 @@ export const STACK: Stack[] = [
         name: "Styled Components",
         img: "styled-components.svg",
         type: ["others"]
+    },
+    {
+        id: 22,
+        name: "Redux",
+        img: "redux.svg",
+        type: ["front tools"]
+    },
+    {
+        id: 23,
+        name: "Tailwind CSS",
+        img: "tailwindcss.svg",
+        type: ["front tools"]
     }
 ]
