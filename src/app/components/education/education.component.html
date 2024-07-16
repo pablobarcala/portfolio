@@ -2,12 +2,12 @@
     @if (idioma == "Es") {
         <h2>Educación</h2>
         @for (education of educationsES; track education.id){
-            <app-education-item [education]="education"></app-education-item>
+            <app-education-item [idioma]="idioma" [education]="education"></app-education-item>
         }
     } @else {
         <h2>Education</h2>
         @for (education of educationsEN; track education.id){
-            <app-education-item [education]="education"></app-education-item>
+            <app-education-item [idioma]="idioma" [education]="education"></app-education-item>
         }
     }
 </div>

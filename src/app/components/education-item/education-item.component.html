@@ -9,10 +9,22 @@
         - {{education.final}}
     } </p>
     @if(!education.final) {
-        <p class="progreso">En progreso</p>
+        <p class="progreso">
+            @if(idioma == "Es"){
+                En progreso
+            }@else {
+                In progress
+            }
+        </p>
     }
     @if(education.url) {
-        <a target="_blank" id="btn" href="{{education.url}}">Certificado</a>
+        <a target="_blank" id="btn" href="{{education.url}}">
+            @if(idioma == "Es"){
+                Certificado
+            }@else {
+                Certificate
+            }
+        </a>
     }
     <div class="separator"></div>
 </div>

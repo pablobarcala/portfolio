@@ -30,14 +30,16 @@ export const PROJECTSen: Project[] = [
     },
     {
         id: 2,
-        name: "Personal finance",
-        description: "Simple app to record daily expenses, developed with React, Axios, JSON Server and Styled Components.",
-        img: "finanzas.png",
+        name: "Tasks list",
+        description: "Simple app to note tasks, developed with React, React Router, Redux and Tailwind CSS. Using localstorage to manage user data.",
+        img: "tasks.png",
         stack: [
             STACK[1],
             STACK[5],
-            STACK[21]
+            STACK[23],
+            STACK[22]
         ],
-        code: "https://github.com/pablobarcala/finanzas-personales"
+        code: "https://github.com/pablobarcala/tasks-react",
+        url: "https://tasks-react-a5d6e.web.app/"
     }
 ]

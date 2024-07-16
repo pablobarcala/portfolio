@@ -11,4 +11,5 @@ import { EDUCATIONes } from '../../interfaces/mock-education-es';
 })
 export class EducationItemComponent {
   @Input() education: Education = EDUCATIONes[0]
+  @Input() idioma: String = ""
 }

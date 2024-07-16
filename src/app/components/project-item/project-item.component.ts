@@ -12,4 +12,5 @@ import { StackItemComponent } from '../stack-item/stack-item.component';
 })
 export class ProjectItemComponent {
   @Input() project: Project = PROJECTSes[0]
+  @Input() idioma: String = ""
 }
