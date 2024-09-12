@@ -9,7 +9,7 @@
 :root {
     font-family: "Poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    color: #fff;
+    color: #f7f7f7;
     background-image: url("assets/bg.png");
     background-size: 20%;
     background-attachment: fixed;
@@ -26,7 +26,7 @@
 }
 
 #component {
-    padding: 50px 200px;
+    padding: 50px 10%;
 }
 
 h2 {
@@ -84,6 +84,17 @@ a#btn:hover {
     100% {
         background-color: rgba(3, 64, 120, 0.3);
         border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    :root {
+        font-size: 14px;
+        background-size: 70%;
+    }
+
+    #component {
+        padding: 20px 5%;
     }
 }
 

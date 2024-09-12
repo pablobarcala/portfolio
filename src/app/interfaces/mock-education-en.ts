@@ -2,6 +2,14 @@ import { Education } from "./Education";
 
 export const EDUCATIONen: Education[] = [
     {
+        id: 1,
+        name: "UNSTA",
+        title: "Software developer",
+        description: "Pursuing a technical degree in Software Development and Quality with technologies like React and APS .NET",
+        img: "unsta.png",
+        inicio: "March 2023"
+    },
+    {
         id: 0,
         name: "Argentina Programa 4.0",
         title: "Full Stack Web Developer",
@@ -10,14 +18,6 @@ export const EDUCATIONen: Education[] = [
         url: "https://drive.google.com/file/d/1bpRbE8yejbshPw8f-SKk5G18Tjq19cyB/view?usp=sharing",
         inicio: "October 2022",
         final: "May 2023"
-    },
-    {
-        id: 1,
-        name: "UNSTA",
-        title: "Software developer",
-        description: "Pursuing a technical degree in Software Development and Quality with technologies like React and APS .NET",
-        img: "unsta.png",
-        inicio: "March 2023"
     },
     {
         id: 2,
