@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import CursorGlow from "@/components/CursorGlow";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Pablo Barcala",
+  title: "Pablo Barcala | Full Stack developer | Next.js + .NET + MongoDB",
   description: "Portfolio personal de Pablo Barcala, desarrollador web.",
 };
 
@@ -26,11 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.className} antialiased bg-neutral-950 text-neutral-100`}
       >
         <LanguageProvider>
           {children}
         </LanguageProvider>
+        <CursorGlow />
       </body>
     </html>
   );
