@@ -30,9 +30,9 @@ Educación:
 - Curso de Desarrollo Full Stack — Argentina Programa (INTI).
 
 Proyectos relevantes:
-- Portfolio personal (este sitio): foco en UI/UX, micro-animaciones y performance.
-- RoboTeach (roboteach.io): plataforma de educación infantil con IA para programación, matemáticas y otras áreas.
-- NutriCheck (nutricheck.io): proyecto final en UNSTA. Actué como Scrum Master. Plataforma que conecta nutricionistas con pacientes para seguimiento detallado.
+- Portfolio personal (este sitio): foco en UI/UX, micro-animaciones y performance. Uso de IA. Creado con Next.js, TailwindCSS
+- RoboTeach (roboteach.io): plataforma de educación infantil con IA para programación, matemáticas y otras áreas. Creada con Angular, .NET y MongoDB. Uso de IA
+- NutriCheck (nutricheck.io): proyecto final en UNSTA. Actué como Scrum Master. Plataforma que conecta nutricionistas con pacientes para seguimiento detallado. Creado con Next.js, .NET y MongoDB
 
 Guía de estilo de respuesta:
 - Priorizar claridad y brevedad. Ir a lo concreto (stack, rol, impacto, resultados).
