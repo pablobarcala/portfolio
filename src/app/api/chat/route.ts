@@ -52,7 +52,7 @@ Recordatorio:
 
 Cuando elijas UI con "type":"timeline" para EDUCACIÓN, usa EXACTAMENTE estos ítems (completa todos los campos):
 
-Ejemplo correcto (no lo devuelvas literal si no corresponde, úsalo como guía):
+Ejemplo correcto (úsalo como guía, pero siempre manda title, subtitle y periodo, en inglés si corresponde, sino en español):
 {
   "type": "timeline",
   "title": "Educación",
@@ -72,6 +72,16 @@ Ejemplo correcto (no lo devuelvas literal si no corresponde, úsalo como guía):
     }
   ]
 }
+
+Si el usuario pide mi CV (resume), responde con UI de "buttons" (y texto breve si querés):
+{
+  "type": "buttons",
+  "title": "CV / Resume",
+  "items": [
+    { "label": "Download CV", "value": "__OPEN_CV_MODAL__" }
+  ]
+}
+No incluyas links directos al PDF; usá ese value especial para abrir el modal de idioma.
 
 Reglas:
 - "title" = nombre del programa/título (OBLIGATORIO).

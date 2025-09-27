@@ -4,6 +4,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import CursorGlow from "@/components/CursorGlow";
 import { Analytics } from "@vercel/analytics/next";
+import { CvModalProvider } from "@/components/CvModalProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -25,9 +26,9 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} antialiased bg-neutral-950 text-neutral-100`}
       >
-        <LanguageProvider>
+        <CvModalProvider>
           {children}
-        </LanguageProvider>
+        </CvModalProvider>
         <CursorGlow />
         <Analytics />
       </body>

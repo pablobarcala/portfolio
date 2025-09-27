@@ -3,6 +3,7 @@ import { extractUiPayload } from "@/utils/parse-ai-ui"
 import { Send } from "lucide-react"
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react"
 import { UiBlock } from "./UiBlocks"
+import { useCvModal } from "./CvModalProvider"
 
 export type ChatMessage = {
   id: string
@@ -23,6 +24,7 @@ const ChatPanel = forwardRef(function ChatPanel(
 ) {
   const listRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
+  const { openCvModal } = useCvModal()
 
   useImperativeHandle(ref, () => ({
     focusInput: () => inputRef.current?.focus()
@@ -41,6 +43,14 @@ const ChatPanel = forwardRef(function ChatPanel(
       onSend(value)
       ;(e.target as HTMLInputElement).value = ""
     }
+  }
+
+  const handleUiButton = (value: string) => {
+    if (value === "__OPEN_CV_MODAL__") {
+      openCvModal()
+      return
+    }
+    onSend(value)
   }
 
   return (
@@ -80,7 +90,7 @@ const ChatPanel = forwardRef(function ChatPanel(
               {/* UI */}
               {structured?.ui && (
                 <div className="mb-2">
-                  <UiBlock ui={structured.ui} onButtonClick={(value) => onSend(value)} />
+                  <UiBlock ui={structured.ui} onButtonClick={handleUiButton} />
                 </div>
               )}
               {/* Texto */}

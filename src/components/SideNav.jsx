@@ -1,10 +1,12 @@
 "use client"
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
+import { FileDown, Github, Linkedin, Mail, Menu, X } from "lucide-react"
 import { useState } from "react";
+import { useCvModal } from "./CvModalProvider";
 
 export default function SideNav({ onHomeClick }) {
     const [open, setOpen] = useState(false);
+    const { openCvModal } = useCvModal()
 
     const contactItems = [
         { 
@@ -44,6 +46,14 @@ export default function SideNav({ onHomeClick }) {
                 >
                     PB
                 </p>
+                <button
+                    onClick={openCvModal}
+                    className="text-gray-200/90 hover:text-white hover:bg-white/10 p-2 rounded-xl border border-white/10 transition"
+                    aria-label="Download CV (EN  / ESP)"
+                    title="Download CV (EN  / ESP)"
+                >
+                    <FileDown size={22} />
+                </button>
                 {contactItems.map((item) => (
                     <a target="_blank" key={item.key} href={item.href} className="text-gray-400 hover:text-white transition-colors">
                         {item.icon}
@@ -81,6 +91,13 @@ export default function SideNav({ onHomeClick }) {
                                 </button>
                             </div>
                             <nav className="flex flex-col gap-3">
+                                <button
+                                    onClick={() => { setOpen(false); openCvModal() }}
+                                    className="flex items-center gap-3 px-3 py-2 rounded-xl border border-white/10 text-white/90 hover:bg-white/10"
+                                >
+                                    <FileDown className="w-5 h-5" />
+                                    <span className="text-sm">Download CV (EN / ESP)</span>
+                                </button>
                                 {contactItems.map((item) => (
                                     <a
                                         key={item.key}
