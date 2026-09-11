@@ -57,6 +57,12 @@ export async function getPortfolioData() {
               profileDoc.statusBadge?.en ||
               PORTFOLIO_DATA.profile.statusBadge.en,
           },
+          avatarBadge: profileDoc.avatarBadge
+            ? {
+                es: profileDoc.avatarBadge.es,
+                en: profileDoc.avatarBadge.en,
+              }
+            : PORTFOLIO_DATA.profile.avatarBadge,
           bio: {
             es: profileDoc.bio?.es || PORTFOLIO_DATA.profile.bio.es,
             en: profileDoc.bio?.en || PORTFOLIO_DATA.profile.bio.en,
@@ -64,6 +70,16 @@ export async function getPortfolioData() {
           avatarUrl: profileDoc.avatar
             ? urlFor(profileDoc.avatar).url()
             : undefined,
+          tags:
+            profileDoc.tags && profileDoc.tags.length > 0
+              ? profileDoc.tags.map((t: any) => ({
+                  label: {
+                    es: t.label?.es || "",
+                    en: t.label?.en || "",
+                  },
+                  color: t.color || "amber",
+                }))
+              : PORTFOLIO_DATA.profile.tags,
         }
       : PORTFOLIO_DATA.profile;
 

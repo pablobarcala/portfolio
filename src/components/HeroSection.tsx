@@ -4,7 +4,8 @@ import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCvModal } from "@/components/CvModalProvider";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
-import { MessageSquare, ArrowRight, FileText, CheckCircle2, Sparkles } from "lucide-react";
+import { resolveAvatarBadge } from "@/utils/avatarBadge";
+import { MessageSquare, ArrowRight, FileText, CheckCircle2 } from "lucide-react";
 
 interface HeroSectionProps {
   profile?: typeof PORTFOLIO_DATA.profile & { avatarUrl?: string };
@@ -18,6 +19,12 @@ export default function HeroSection({
   const { language, t } = useLanguage();
   const { openCvModal } = useCvModal();
 
+  const avatarBadgeText = resolveAvatarBadge(
+    profile.avatarBadge,
+    language,
+    profile.name
+  );
+
   const whatsappUrl = `https://wa.me/${profile.whatsappNumber.replace("+", "")}?text=${encodeURIComponent(
     profile.whatsappMessage[language]
   )}`;
@@ -27,6 +34,18 @@ export default function HeroSection({
     green: "bg-lime-400 text-neutral-950",
     cyan: "bg-sky-400 text-neutral-950",
     orange: "bg-orange-400 text-neutral-950",
+  };
+
+  const tagColors: Record<string, string> = {
+    amber: "bg-amber-200 text-neutral-900",
+    sky: "bg-sky-200 text-neutral-900",
+    lime: "bg-lime-200 text-neutral-900",
+    orange: "bg-orange-200 text-neutral-900",
+    purple: "bg-purple-200 text-neutral-900",
+    pink: "bg-pink-200 text-neutral-900",
+    yellow: "bg-amber-200 text-neutral-900",
+    green: "bg-lime-200 text-neutral-900",
+    cyan: "bg-sky-200 text-neutral-900",
   };
 
   return (
@@ -104,8 +123,7 @@ export default function HeroSection({
               {/* Folder tab on top of profile card */}
               <div className="flex items-center pl-4 -mb-[2px] z-10">
                 <div className="h-7 px-3 rounded-t-lg border-2 border-b-0 border-neutral-950 dark:border-neutral-200 bg-sky-400 text-neutral-950 font-black text-xs flex items-center gap-1 shadow-[2px_-2px_0px_0px_#000] dark:shadow-[2px_-2px_0px_0px_rgba(255,255,255,0.7)]">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>{profile.name}</span>
+                  <span className="truncate max-w-[200px]">{avatarBadgeText}</span>
                 </div>
               </div>
 
@@ -130,17 +148,21 @@ export default function HeroSection({
                   </p>
                 </div>
 
-                <div className="w-full pt-2 border-t-2 border-dashed border-neutral-300 dark:border-neutral-700 flex justify-center gap-2">
-                  <span className="neo-badge bg-amber-200 text-neutral-900 text-[10px]">
-                    Next.js 15
-                  </span>
-                  <span className="neo-badge bg-sky-200 text-neutral-900 text-[10px]">
-                    .NET 8
-                  </span>
-                  <span className="neo-badge bg-lime-200 text-neutral-900 text-[10px]">
-                    AI Systems
-                  </span>
-                </div>
+                {profile.tags && profile.tags.length > 0 && (
+                  <div className="w-full pt-2 border-t-2 border-dashed border-neutral-300 dark:border-neutral-700 flex flex-wrap justify-center gap-2">
+                    {profile.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className={`neo-badge text-[10px] ${
+                          tagColors[tag.color || "amber"] ||
+                          "bg-amber-200 text-neutral-900"
+                        }`}
+                      >
+                        {tag.label[language] || tag.label.es || tag.label.en}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>

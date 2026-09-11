@@ -39,6 +39,11 @@ export interface SkillCategory {
   skills: string[];
 }
 
+export interface ProfileTag {
+  label: { es: string; en: string };
+  color?: "amber" | "sky" | "lime" | "orange" | "purple" | "pink" | string;
+}
+
 export const PORTFOLIO_DATA = {
   profile: {
     name: "Pablo Barcala",
@@ -59,10 +64,19 @@ export const PORTFOLIO_DATA = {
       es: "Disponible para proyectos freelance y roles full-time",
       en: "Available for freelance projects & full-time roles",
     },
+    avatarBadge: {
+      es: "Sobre mí",
+      en: "About me",
+    },
     bio: {
       es: "Desarrollador Full Stack con visión de negocio y producto. Combino ingeniería de software sólida (Next.js, .NET, TypeScript, TDD) con integraciones de Inteligencia Artificial para crear herramientas rápidas, confiables y con alto impacto comercial.",
       en: "Full Stack Developer with a strong product and business mindset. I combine solid software engineering (Next.js, .NET, TypeScript, TDD) with AI integrations to build fast, reliable, and high-impact digital solutions.",
     },
+    tags: [
+      { label: { es: "Next.js 15", en: "Next.js 15" }, color: "amber" },
+      { label: { es: ".NET 8", en: ".NET 8" }, color: "sky" },
+      { label: { es: "AI Systems", en: "AI Systems" }, color: "lime" },
+    ] as ProfileTag[],
   },
 
   metrics: [

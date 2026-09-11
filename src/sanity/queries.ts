@@ -12,8 +12,14 @@ export const PROFILE_QUERY = defineQuery(`
     github,
     linkedin,
     statusBadge,
+    avatarBadge,
     bio,
     avatar,
+    tags[]{
+      _key,
+      label,
+      color
+    },
     metrics[]{
       _key,
       value,
